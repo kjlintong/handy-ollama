@@ -10,7 +10,7 @@
 简体中文 | [English](README_en.md)
 
 > [!NOTE]
-> **v2.0 (Phase 2)**: The tutorial has been restructured into 12 chapters across four layers — Infrastructure → Protocol → Agent Integration → Scenarios. New core content includes MCP protocol, Agent fundamentals, and Harness integrations (Claude Code / Codex CLI / DeepSeek Harness).
+> **v2.0 (Full Rewrite)**: A complete improved version of the Phase-1 tutorial — it will **replace** the Phase-1 content when released. Restructured into 12 chapters + Appendix (Infrastructure → Protocol → Agent Integration → Scenarios). **No Phase-1 background needed**; all basic content (installation, multi-language SDKs) is integrated, with language details in the Appendix. New core content: MCP protocol, Agent fundamentals, Harness integrations (Claude Code / Codex CLI / DeepSeek Harness).
 
 ## 🎉 Official Recognition
 

@@ -19,7 +19,7 @@
 简体中文 | [English](README_en.md)
 
 > [!NOTE]
-> **v2.0（第二期）**：教程已按「基础设施层 → 协议层 → Agent 集成层 → 场景实战层」重构为 12 章，新增 MCP 协议、Agent 原理与 Harness 集成（Claude Code / Codex CLI / DeepSeek Harness）等核心内容。持续完善中，欢迎提 Issue 反馈。
+> **v2.0（全新改版）**：本版为第一期的**完整改进版**，上线后将直接替换第一期内容。教程按「基础设施层 → 协议层 → Agent 集成层 → 场景实战层」重构为 12 章 + 附录，**从零开始、无需第一期基础**；第一期的安装配置、多语言调用等基础内容已全部整合进来（多语言细节移至附录）。持续完善中，欢迎提 Issue 反馈。
 
 ## 🎉 官方收录
 
@@ -29,7 +29,7 @@
 
 Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有削弱 Ollama 的价值，反而放大了**"本地模型作为 Agent 后端"**的需求。市面上的 Agent 教程都在教"怎么开车"，而本教程教你"怎么给车加油、保养发动机、选什么油"——**我们不是 Agent 教程，而是 Agent 教程的"基础设施配套手册"**。
 
-本教程涵盖：
+本教程**零基础可读**（前 3 章从安装讲起，第一期的全部基础内容均已整合），涵盖：
 
 - **本地 AI 基础设施**：Ollama 安装配置、模型管理、GGUF 与量化选型（Agent 场景视角）；
 - **协议与接口**：REST API、OpenAI 兼容接口、Tool Calling、**MCP 协议**（本书核心差异化内容）；
@@ -68,7 +68,7 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 | [1. REST API 核心交互](docs/C4/1.%20REST%20API%20核心交互.md) | 请求/响应结构、流式、JSON 模式 | ✅ |
 | [2. OpenAI 兼容接口](docs/C4/2.%20OpenAI%20兼容接口.md) | **对接 Harness 的事实标准** | ✅ |
 | [3. Tool Calling API](docs/C4/3.%20Tool%20Calling%20API.md) | **工具调用请求/响应详解（实测）** | ✅ |
-| [4~6. 多语言调用](docs/C4/7.%20多语言调用概览.md) | Python / JavaScript / Java / C++ / Go | ✅ |
+| [4. 多语言调用（附录入口）](docs/C4/4.%20多语言调用（附录）.md) | Python / JavaScript / Java / C++ / Go（详见[附录A](../docs/appendix/A-多语言调用/0.%20多语言调用概览.md)） | ✅ |
 | **第5章 MCP 协议与工具集成（新增·核心）** | | |
 | [1. MCP 协议架构](docs/C5/1.%20MCP%20协议架构.md) | 协议原理、架构、调用链 | ✅ |
 | [2. 用 Ollama 构建 MCP Server](docs/C5/2.%20用%20Ollama%20构建%20MCP%20Server.md) | 天气服务 Server（实测） | ✅ |
@@ -114,6 +114,18 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 | [3. n8n 工作流自动化](docs/C12/3.%20n8n%20工作流自动化.md) | 自动化流程接入 | ✅ |
 | [4. FastAPI 自定义对话界面](docs/C12/4.%20使用%20FastAPI%20部署自定义对话界面.md) | 自定义界面 | ✅ |
 
+### 📎 附录（基础操作细节与经典案例）
+
+| 文档 | 内容 | 状态 |
+|---|---|---|
+| [附录说明](docs/appendix/README.md) | 附录结构总览 | ✅ |
+| [A. 多语言调用概览](docs/appendix/A-多语言调用/0.%20多语言调用概览.md) | 各语言路线选择 | ✅ |
+| [A-1. Python 完整指南](docs/appendix/A-多语言调用/1.%20在%20Python%20中使用%20Ollama%20API.md) | 官方 Python SDK | ✅ |
+| [A-2. JavaScript 完整指南](docs/appendix/A-多语言调用/2.%20在%20JavaScript%20中使用%20Ollama%20API.md) | 官方 JS SDK | ✅ |
+| [A-3. Java 完整指南](docs/appendix/A-多语言调用/3.%20在%20Java%20中使用%20Ollama%20API.md) | 官方 Java SDK + Spring AI | ✅ |
+| [B-1. AI Copilot 编程助手](docs/appendix/B-应用案例/1.%20搭建本地的%20AI%20Copilot%20编程助手.md) | Continue 插件接入本地模型 | ✅ |
+| [B-2/3. 框架原生 Agent 参考](docs/appendix/B-应用案例/2.%20LangChain%20本地%20Agent%20参考.md) | LangChain / LlamaIndex Agent | ✅ |
+
 ### 📡 在线补充文档（living-docs/，持续更新）
 
 | 文档 | 内容 | 更新频率 |
@@ -134,7 +146,7 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 
 ```
 handy-ollama/
-├── docs/            # 教程正文（12 章）
+├── docs/            # 教程正文（12 章 + 附录）
 ├── notebook/        # 可运行代码示例
 ├── living-docs/     # 在线补充文档（硬件/变更/排障）
 ├── images/          # 教程插图
