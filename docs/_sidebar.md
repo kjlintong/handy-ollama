@@ -66,3 +66,5 @@
         * [硬件选购指南](../living-docs/hardware.md)
         * [版本变更日志](../living-docs/changelog.md)
         * [常见问题排查](../living-docs/troubleshooting.md)
+    * 📁 第一期归档
+        * [第一期教程（旧版 v1）](../v1/README.md)

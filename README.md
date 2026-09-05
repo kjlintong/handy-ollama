@@ -126,6 +126,10 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 | [B-1. AI Copilot 编程助手](docs/appendix/B-应用案例/1.%20搭建本地的%20AI%20Copilot%20编程助手.md) | Continue 插件接入本地模型 | ✅ |
 | [B-2/3. 框架原生 Agent 参考](docs/appendix/B-应用案例/2.%20LangChain%20本地%20Agent%20参考.md) | LangChain / LlamaIndex Agent | ✅ |
 
+### 📁 第一期归档（旧版）
+
+第一期教程（v1.0，7 章结构）已完整归档至 [`v1/`](v1/README.md)，仅供历史参考，不再维护。本版（v2.0）为第一期的完整改进版，上线后将直接替换第一期。
+
 ### 📡 在线补充文档（living-docs/，持续更新）
 
 | 文档 | 内容 | 更新频率 |
