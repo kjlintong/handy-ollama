@@ -1,6 +1,6 @@
 <div align='center'>
     <img src="./images/header.svg" alt="alt text" width="100%">
-    <h1>💻 handy-ollama 🦙 (🧪Beta公测版)</h1>
+    <h1>💻 handy-ollama 🦙 (v2.0)</h1>
 </div>
 
 <div align="center">
@@ -12,104 +12,134 @@
 </div>
 
 <div align="center">
-  <h3>📚 从零开始实现 CPU 玩转大模型部署！</h3>
-  <p><em>动手学 Ollama，快速实现大模型本地部署</em></p>
+  <h3>🤖 Agent 时代的本地模型底座</h3>
+  <p><em>从"Ollama 新手教程"升级为"本地 AI 基础设施与 Agent 集成实战指南"</em></p>
 </div>
 
-简体中文 | [English](README_en.md) 
+简体中文 | [English](README_en.md)
 
-> [!WARNING]
-> 🧪 Beta 公测版本提示：教程主体已完成，正在优化细节，欢迎大家提 Issue 反馈问题或建议。
+> [!NOTE]
+> **v2.0（第二期）**：教程已按「基础设施层 → 协议层 → Agent 集成层 → 场景实战层」重构为 12 章，新增 MCP 协议、Agent 原理与 Harness 集成（Claude Code / Codex CLI / DeepSeek Harness）等核心内容。持续完善中，欢迎提 Issue 反馈。
 
-## 🎉官方收录
+## 🎉 官方收录
 
 **2025.11.06，本项目被 Ollama 官方仓库收录，且是目前唯一的 Tutorial：https://github.com/ollama/ollama#tutorial**
 
 ## 🚀 项目简介
-动手学 Ollama 教程，轻松上手实现大模型本地化部署，快速在本地管理以及运行大模型，让 CPU 也可以玩转大模型推理部署！
 
-本教程涵盖从基础入门到进阶使用的全方位内容，并通过实际应用案例深入理解和掌握大模型部署以及应用技术。我们的教程提供清晰的步骤和实用的技巧，无论是刚刚接触大模型部署的小白，还是有一定经验的开发者，都可以从零开始学习 Ollama ，实现本地部署大模型以及相关应用。
+Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有削弱 Ollama 的价值，反而放大了**"本地模型作为 Agent 后端"**的需求。市面上的 Agent 教程都在教"怎么开车"，而本教程教你"怎么给车加油、保养发动机、选什么油"——**我们不是 Agent 教程，而是 Agent 教程的"基础设施配套手册"**。
 
-本项目主要内容：
+本教程涵盖：
 
-1. Ollama 介绍、安装和配置，包括在 macOS、Windows、Linux 和 Docker 下的安装与配置；
-2. Ollama 自定义导入模型，包括从 GGUF 导入、从 Pytorch 或 Safetensors 导入、由模型直接导入、自定义 Prompt；
-3. Ollama REST API，包括 Ollama API 使用指南、在 Python、Java、JavaScript 和 C++ 等语言中使用 Ollama API；
-4. Ollama 在 LangChain 中的使用，包括在 Python 和 JavaScript 中的集成；
-5. Ollama 可视化界面部署和应用案例，包括使用 FastAPI 和 WebUI 部署可视化对话界面，以及本地 RAG 应用、Agent 应用等。
+- **本地 AI 基础设施**：Ollama 安装配置、模型管理、GGUF 与量化选型（Agent 场景视角）；
+- **协议与接口**：REST API、OpenAI 兼容接口、Tool Calling、**MCP 协议**（本书核心差异化内容）；
+- **Agent 集成**：Agent 架构原理、100 行手写 Agent、**Claude Code / Codex CLI / DeepSeek Harness × Ollama 集成实战**；
+- **场景实战**：本地 RAG（含 GraphRAG / Agentic RAG）、多 Agent 协作、Open WebUI / Dify / n8n 部署；
+- **在线补充文档**（living-docs/）：硬件选购、版本变更、故障排查，持续更新。
 
-**热忱欢迎感兴趣的同学或者开发者们 提出 issue 或者 提交 pull request，让我们一起完善这个项目！**
-
-**我们坚信：每一位对大模型充满热情的学习者，都应该有机会探索和实践。无论你的编程语言背景如何，无论你的计算资源如何，我们都希望能帮助你使用个人 PC 实现大模型部署。 让我们携手打破技术壁垒，共同开启 LLM 探索之旅！**
-
-
-目录结构说明：
-
-      docs ---------------------- Markdown 文档文件
-      notebook ------------------ Notebook 源代码文件以及部分 Python、Java 和 JavaScript 源文件 
-      images -------------------- 图片
-
-📖 在线阅读：https://datawhalechina.github.io/handy-ollama/
-
-
-## 💡 立项理由
-随着大模型的飞速发展，市面上出现了越来越多的开源大模型，但是许多模型的部署需要利用 GPU 资源，如何让大模型时代的红利普惠到每一个人，让每一个人都可以部署属于自己的大模型。Ollama 是一个开源的大语言部署服务工具，只需 CPU 即可部署大模型。我们希望通过动手学 Ollama 这一开源教程，帮助学习者快速上手 Ollama ，让每一位大模型爱好者、学习者以及开发者都能在本地部署自己的大模型，进而开发一些大模型应用，让大模型赋能千行百业！
-
-## 🎯 项目受众
-- 希望不受 GPU 资源限制，在本地运行大模型；
-- 希望在消费级硬件上进行大模型有效的推理；
-- 希望在本地部署大模型，开发大模型应用；
-- 希望在本地管理大模型，让本地模型安全可靠。
-
-## ✨ 项目亮点
-本项目旨在使用 CPU 部署本地大模型，虽然目前已经有很多 LLM 相关的教程，但是这些教程中模型基本上都需要 GPU 资源，这对于很多资源受限的学习者不是很友好。因此，本项目通过动手学 Ollama ，帮助学习者快速上手本地 CPU 部署大模型。
-
+> 每一行代码均可复现，每一个 Harness 集成均经实测（本书实测环境：Ollama 0.17.7 + qwen3:8b-64k + WSL2）。
 
 ## 📖 内容导航
-| 章节                                                                                                   | 关键内容                      | 状态  |
-|------------------------------------------------------------------------------------------------------|---------------------------|-----|
-| <strong>第一章 Ollama 介绍</strong>                                                                       |                           |     |
-| [1.1 Ollama 介绍](docs/C1/1.%20Ollama%20介绍.md)                                                         | 基础概念、核心特性                 | ✅   |
-| <strong>第二章 Ollama 安装与配置</strong>                                                                    |                           | ✅   |
-| [2.1 macOS 安装与配置](docs/C2/1.%20Ollama%20在%20macOS%20下的安装与配置.md)                                      | macOS 安装、配置               | ✅   |
-| [2.2 Windows 安装与配置](docs/C2/2.%20Ollama%20在%20Windows%20下的安装与配置.md)                                  | Windows 安装、配置             | ✅   |
-| [2.3 Linux 安装与配置](docs/C2/3.%20Ollama%20在%20Linux%20下的安装与配置.md)                                      | Linux 安装、配置               | ✅   |
-| [2.4 Docker 安装与配置](docs/C2/4.%20Ollama%20在%20Docker%20下的安装与配置.md)                                    | Docker 安装、配置              | ✅   |
-| <strong>第三章 自定义使用 Ollama</strong>                                                                    | 个性化使用                     | ✅   |
-| [3.1 自定义导入模型](docs/C3/1.%20自定义导入模型.md)                                                               | 外部模型导入                    | ✅   |
-| [3.2 自定义模型存储位置](docs/C3/2.%20自定义模型存储位置.md)                                                           | 存储路径更改                    | ✅   |
-| [3.3 自定义在 GPU 中运行](docs/C3/3.%20自定义在%20GPU%20中运行.md)                                                 | GPU 加速配置                  | ✅   |
-| <strong>第四章 Ollama REST API</strong>                                                                 |                           |     |
-| [4.1 Ollama API 使用指南](docs/C4/1.%20Ollama%20API%20使用指南.md)                                           | 调用规则、参数说明                 | ✅   |
-| [4.2 Python 中使用 Ollama API](docs/C4/2.%20在%20Python%20中使用%20Ollama%20API.md)                         | Python 调用                 | ✅   |
-| [4.3 Java 中使用 Ollama API](docs/C4/3.%20在%20Java%20中使用%20Ollama%20API.md)                             | Java 调用                   | ✅   |
-| [4.4 JavaScript 中使用 Ollama API](docs/C4/4.%20在%20JavaScript%20中使用%20Ollama%20API.md)                 | JavaScript 调用             | ✅   |
-| [4.5 C++ 中使用 Ollama API](docs/C4/5.%20在%20C++%20中使用%20Ollama%20API.md)                               | C++ 调用                    | ✅   |
-| [4.6 Golang 中使用 Ollama API](docs/C4/6.%20在%20Golang%20中使用%20Ollama%20API.md)                         | Golang 调用                 | ✅   |
-| C# 中使用 Ollama API                                                                                    | C# 调用（待更）                 | 🚧  |
-| Rust 中使用 Ollama API                                                                                  | Rust 调用（待更）               | 🚧  |
-| Ruby 中使用 Ollama API                                                                                  | Ruby 调用（待更）               | 🚧  |
-| R 中使用 Ollama API                                                                                     | R 调用（待更）                  | 🚧  |
-| <strong>第五章 Ollama 在 LangChain 中的使用</strong>                                                         |                           |     |
-| [5.1 Python 中的集成](docs/C5/1.%20Ollama%20在%20LangChain%20中的使用%20-%20Python%20集成.md)                   | Python + LangChain 集成     | ✅   |
-| [5.2 JavaScript 中的集成](docs/C5/2.%20Ollama%20在%20LangChain%20中的使用%20-%20JavaScript%20集成.md)           | JavaScript + LangChain 集成 | ✅   |
-| <strong>第六章 Ollama 可视化界面部署</strong>                                                                  |                           |     |
-| [6.1 FastAPI 部署可视化界面](docs/C6/1.%20使用%20FastAPI%20部署%20Ollama%20可视化对话界面.md)                          | FastAPI 部署                | ✅   |
-| [6.2 WebUI 部署可视化界面](docs/C6/2.%20使用%20WebUI%20部署%20Ollama%20可视化对话界面.md)                              | WebUI 部署                  | ✅   |
-| <strong>第七章 应用案例</strong>                                                                            |                           |     |
-| [7.1 搭建本地 AI Copilot 编程助手](docs/C7/1.%20搭建本地的%20AI%20Copilot%20编程助手.md)                              | 本地编程助手                    | ✅   |
-| [7.2 Dify 接入本地模型](docs/C7/2.%20Dify%20接入%20Ollama%20部署的本地模型.md)                                      | Dify 集成本地模型               | ✅   |
-| [7.3 LangChain 搭建本地 RAG 应用](docs/C7/3.%20使用%20LangChain%20搭建本地%20RAG%20应用.md)                        | LangChain + 本地 RAG        | ✅   |
-| [7.4 LlamaIndex 搭建本地 RAG 应用](docs/C7/4.%20使用%20LlamaIndex%20搭建本地%20RAG%20应用.md)                      | LlamaIndex + 本地 RAG       | ✅   |
-| [7.5 LangChain 实现本地 Agent](docs/C7/5.%20使用%20LangChain%20实现本地%20Agent.md)                            | LangChain + 本地 Agent      | ✅   |
-| [7.6 LlamaIndex 实现本地 Agent](docs/C7/6.%20使用%20LlamaIndex%20实现本地%20Agent.md)                          | LlamaIndex + 本地 Agent     | ✅   |
-| [7.7 DeepSeek R1 + Ollama 本地 RAG](docs/C7/7.%20使用%20DeepSeek%20R1%20和%20Ollama%20实现本地%20RAG%20应用.md) | DeepSeek R1 + 本地 RAG      | ✅   |
-| ...                                                                                                  | ...                       | ... |
 
-**_注：所有标记（待更新）的内容，以及其他相关的内容，热忱欢迎感兴趣的开发者们 提出 issue 或者 提交 pull request，让我们一起完善这个项目！_**
+### 第一部分：基础设施层
+
+| 章节 | 关键内容 | 状态 |
+|---|---|---|
+| **第1章 Ollama 与本地 AI 生态** | | |
+| [1. Ollama 与本地 AI 生态](docs/C1/1.%20Ollama%20与%20本地%20AI%20生态.md) | 核心特性、模型库、**Agent 场景模型选型指南** | ✅ |
+| **第2章 安装与配置** | | |
+| [1. macOS 安装与配置](docs/C2/1.%20Ollama%20在%20macOS%20下的安装与配置.md) | macOS 安装 | ✅ |
+| [2. Windows 安装与配置](docs/C2/2.%20Ollama%20在%20Windows%20下的安装与配置.md) | Windows 安装、环境变量、**WSL2 访问** | ✅ |
+| [3. Linux 安装与配置](docs/C2/3.%20Ollama%20在%20Linux%20下的安装与配置.md) | Linux 安装、systemd | ✅ |
+| [4. Docker 安装与配置](docs/C2/4.%20Ollama%20在%20Docker%20下的安装与配置.md) | Docker 部署 | ✅ |
+| [5. GPU/CPU 混合推理配置](docs/C2/5.%20GPU-CPU%20混合推理配置.md) | 混合推理、显存优化 | ✅ |
+| **第3章 模型管理与自定义** | | |
+| [1. 自定义导入模型](docs/C3/1.%20自定义导入模型.md) | GGUF / Safetensors 导入 | ✅ |
+| [2. 自定义模型存储位置](docs/C3/2.%20自定义模型存储位置.md) | 存储路径迁移 | ✅ |
+| [3. 自定义在 GPU 中运行](docs/C3/3.%20自定义在%20GPU%20中运行.md) | GPU 配置 | ✅ |
+| [4. GGUF 深度解析与量化选型](docs/C3/4.%20GGUF%20深度解析与量化选型.md) | 量化原理、**Agent 场景量化权衡** | ✅ |
+| [5. Modelfile 高级编写](docs/C3/5.%20Modelfile%20高级编写.md) | 系统提示词/参数固化 | ✅ |
+
+### 第二部分：协议与接口层
+
+| 章节 | 关键内容 | 状态 |
+|---|---|---|
+| **第4章 Ollama API 深度指南** | | |
+| [1. REST API 核心交互](docs/C4/1.%20REST%20API%20核心交互.md) | 请求/响应结构、流式、JSON 模式 | ✅ |
+| [2. OpenAI 兼容接口](docs/C4/2.%20OpenAI%20兼容接口.md) | **对接 Harness 的事实标准** | ✅ |
+| [3. Tool Calling API](docs/C4/3.%20Tool%20Calling%20API.md) | **工具调用请求/响应详解（实测）** | ✅ |
+| [4~6. 多语言调用](docs/C4/7.%20多语言调用概览.md) | Python / JavaScript / Java / C++ / Go | ✅ |
+| **第5章 MCP 协议与工具集成（新增·核心）** | | |
+| [1. MCP 协议架构](docs/C5/1.%20MCP%20协议架构.md) | 协议原理、架构、调用链 | ✅ |
+| [2. 用 Ollama 构建 MCP Server](docs/C5/2.%20用%20Ollama%20构建%20MCP%20Server.md) | 天气服务 Server（实测） | ✅ |
+| [3. MCP Client 调用链](docs/C5/3.%20MCP%20Client%20调用链.md) | **本地模型使用 MCP 工具（实测）** | ✅ |
+| [4. 常用 MCP Server 与 Ollama 配合](docs/C5/4.%20常用%20MCP%20Server%20与%20Ollama%20配合.md) | 官方/社区 Server 接入 | ✅ |
+| **第6章 主流框架集成** | | |
+| [1. LangChain 集成 - Python](docs/C6/1.%20LangChain%20集成%20-%20Python.md) | LangChain + Ollama | ✅ |
+| [2. LangChain 集成 - JavaScript](docs/C6/2.%20LangChain%20集成%20-%20JavaScript.md) | LangChain.js | ✅ |
+| [3. LlamaIndex 集成](docs/C6/3.%20LlamaIndex%20集成.md) | LLM + Embedding 双后端（实测） | ✅ |
+| [4. OpenAI 兼容接口对接任意框架](docs/C6/4.%20OpenAI%20兼容接口对接任意框架.md) | **万能对接法（实测）** | ✅ |
+
+### 第三部分：Agent 集成层（本期核心竞争力）
+
+| 章节 | 关键内容 | 状态 |
+|---|---|---|
+| **第7章 Agent 架构原理（新增）** | | |
+| [1. Agent 架构原理](docs/C7/1.%20Agent%20架构原理.md) | ReAct / Planning / Tool Use、**本地模型三大短板** | ✅ |
+| **第8章 轻量级 Agent 实现（新增）** | | |
+| [1. 轻量级 Agent 实现](docs/C8/1.%20轻量级%20Agent%20实现.md) | **100 行 Python Agent（实测）** | ✅ |
+| [2. 从手写 Agent 到 Harness](docs/C8/2.%20从手写%20Agent%20到%20Harness.md) | 原理 → 成熟工具的迁移路径 | ✅ |
+| **第9章 主流 Harness × Ollama（新增·核心）** | | |
+| [1. Claude Code](docs/C9/1.%20Claude%20Code.md) | 后端配置、模型选型、混合策略 | ✅ |
+| [2. DeepSeek Harness](docs/C9/2.%20DeepSeek%20Harness.md) | `ollama launch dsh` 集成 | ✅ |
+| [3. Codex CLI](docs/C9/3.%20Codex%20CLI.md) | `--oss` 模式、profile 配置（**实测跑通**） | ✅ |
+
+### 第四部分：场景实战层
+
+| 章节 | 关键内容 | 状态 |
+|---|---|---|
+| **第10章 本地 RAG 与知识库** | | |
+| [1. RAG 原理与本地组件](docs/C10/1.%20RAG%20原理与本地组件.md) | 流程、组件选型、调优 | ✅ |
+| [2. LangChain 本地 RAG](docs/C10/2.%20使用%20LangChain%20搭建本地%20RAG%20应用.md) | LangChain + Chroma | ✅ |
+| [3. LlamaIndex 本地 RAG](docs/C10/3.%20使用%20LlamaIndex%20搭建本地%20RAG%20应用.md) | LlamaIndex RAG | ✅ |
+| [4. DeepSeek R1 本地 RAG](docs/C10/4.%20使用%20DeepSeek%20R1%20和%20Ollama%20实现本地%20RAG%20应用.md) | 推理模型 + RAG | ✅ |
+| [5. GraphRAG 与 Agentic RAG](docs/C10/5.%20GraphRAG%20与%20Agentic%20RAG.md) | 进阶方向（LightRAG / 检索工具化） | ✅ |
+| **第11章 本地多 Agent 协作（新增）** | | |
+| [1. CrewAI 多 Agent 协作](docs/C11/1.%20CrewAI%20多%20Agent%20协作.md) | CrewAI + Ollama | ✅ |
+| [2. LangGraph 多 Agent 协作](docs/C11/2.%20LangGraph%20多%20Agent%20协作.md) | 图编排（**实测**） | ✅ |
+| [3. 本地模型资源调度](docs/C11/3.%20本地模型资源调度.md) | 显存规划、并发策略 | ✅ |
+| **第12章 可视化界面与工作流** | | |
+| [1. Open WebUI 部署](docs/C12/1.%20Open%20WebUI%20部署.md) | WebUI 部署 | ✅ |
+| [2. Dify 接入 Ollama](docs/C12/2.%20Dify%20接入%20Ollama.md) | Dify 集成本地模型 | ✅ |
+| [3. n8n 工作流自动化](docs/C12/3.%20n8n%20工作流自动化.md) | 自动化流程接入 | ✅ |
+| [4. FastAPI 自定义对话界面](docs/C12/4.%20使用%20FastAPI%20部署自定义对话界面.md) | 自定义界面 | ✅ |
+
+### 📡 在线补充文档（living-docs/，持续更新）
+
+| 文档 | 内容 | 更新频率 |
+|---|---|---|
+| [hardware.md](living-docs/hardware.md) | 本地 AI 硬件选购指南（2026 版） | 每季度 |
+| [changelog.md](living-docs/changelog.md) | Ollama / Harness 版本变更记录 | 随版本 |
+| [troubleshooting.md](living-docs/troubleshooting.md) | 常见问题排查手册 | 持续 |
+
+### 💻 可运行代码（notebook/）
+
+与章节配套的可运行代码：`notebook/C5`（MCP 示例，实测通过）、`notebook/C8`（100 行 Agent，实测通过）、`notebook/C11`（LangGraph，实测通过）等。所有代码标注运行环境与依赖。
+
+**_注：欢迎感兴趣的开发者们提出 Issue 或提交 PR，让我们一起完善这个项目！_**
 
 **想要深度参与的同学可以联系我们，我们会将你加入到项目的维护者中。**
 
+## 📦 目录结构
+
+```
+handy-ollama/
+├── docs/            # 教程正文（12 章）
+├── notebook/        # 可运行代码示例
+├── living-docs/     # 在线补充文档（硬件/变更/排障）
+├── images/          # 教程插图
+└── README.md        # 本文件
+```
 
 ## 🙏 致谢
 
@@ -125,7 +155,6 @@
 - [姜舒凡](https://github.com/Tsumugii24)（Datawhale成员）
 - [曹越](https://github.com/rainsubtime)（内容创作者）
 - [王晓亮](https://github.com/tomowang)（Datawhale成员）
-
 
 ### 特别感谢
 - Ollama 官方仓库：https://github.com/ollama/ollama
