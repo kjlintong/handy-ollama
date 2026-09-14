@@ -46,19 +46,18 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 | 章节 | 关键内容 | 状态 |
 |---|---|---|
 | **第1章 Ollama 与本地 AI 生态** | | |
-| [1. Ollama 与本地 AI 生态](docs/C1/1.%20Ollama%20与%20本地%20AI%20生态.md) | 核心特性、模型库、**Agent 场景模型选型指南** | ✅ |
+| [1. Ollama 与本地 AI 生态](docs/C1/1.%20Ollama%20与本地%20AI%20生态.md) | 核心特性、模型库、**Agent 场景模型选型指南** | ✅ |
 | **第2章 安装与配置** | | |
 | [1. macOS 安装与配置](docs/C2/1.%20Ollama%20在%20macOS%20下的安装与配置.md) | macOS 安装 | ✅ |
 | [2. Windows 安装与配置](docs/C2/2.%20Ollama%20在%20Windows%20下的安装与配置.md) | Windows 安装、环境变量、**WSL2 访问** | ✅ |
 | [3. Linux 安装与配置](docs/C2/3.%20Ollama%20在%20Linux%20下的安装与配置.md) | Linux 安装、systemd | ✅ |
 | [4. Docker 安装与配置](docs/C2/4.%20Ollama%20在%20Docker%20下的安装与配置.md) | Docker 部署 | ✅ |
-| [5. GPU/CPU 混合推理配置](docs/C2/5.%20GPU-CPU%20混合推理配置.md) | 混合推理、显存优化 | ✅ |
 | **第3章 模型管理与自定义** | | |
-| [1. 自定义导入模型](docs/C3/1.%20自定义导入模型.md) | GGUF / Safetensors 导入 | ✅ |
-| [2. 自定义模型存储位置](docs/C3/2.%20自定义模型存储位置.md) | 存储路径迁移 | ✅ |
-| [3. 自定义在 GPU 中运行](docs/C3/3.%20自定义在%20GPU%20中运行.md) | GPU 配置 | ✅ |
-| [4. GGUF 深度解析与量化选型](docs/C3/4.%20GGUF%20深度解析与量化选型.md) | 量化原理、**Agent 场景量化权衡** | ✅ |
-| [5. Modelfile 高级编写](docs/C3/5.%20Modelfile%20高级编写.md) | 系统提示词/参数固化 | ✅ |
+| [1. 自定义模型存储位置](docs/C3/1.%20自定义模型存储位置.md) | 存储路径迁移 | ✅ |
+| [2. 自定义导入模型](docs/C3/2.%20自定义导入模型.md) | GGUF / Safetensors 导入 | ✅ |
+| [3. GGUF 深度解析与量化选型](docs/C3/3.%20GGUF%20深度解析与量化选型.md) | 量化原理、**Agent 场景量化权衡** | ✅ |
+| [4. Modelfile 高级编写](docs/C3/4.%20Modelfile%20高级编写.md) | 系统提示词/参数固化 | ✅ |
+| [5. GPU-CPU 混合推理配置](docs/C3/5.%20GPU-CPU%20混合推理配置.md) | 混合推理、显存优化 | ✅ |
 
 ### 第二部分：协议与接口层
 
@@ -68,7 +67,7 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 | [1. REST API 核心交互](docs/C4/1.%20REST%20API%20核心交互.md) | 请求/响应结构、流式、JSON 模式 | ✅ |
 | [2. OpenAI 兼容接口](docs/C4/2.%20OpenAI%20兼容接口.md) | **对接 Harness 的事实标准** | ✅ |
 | [3. Tool Calling API](docs/C4/3.%20Tool%20Calling%20API.md) | **工具调用请求/响应详解（实测）** | ✅ |
-| [4. 多语言调用（附录入口）](docs/C4/4.%20多语言调用（附录）.md) | Python / JavaScript / Java / C++ / Go（详见[附录A](../docs/appendix/A-多语言调用/0.%20多语言调用概览.md)） | ✅ |
+| [4. 多语言调用（附录入口）](docs/C4/4.%20多语言调用（附录）.md) | Python / JavaScript / Java / C++ / Go（详见[附录A](docs/appendix/A-多语言调用/0.%20多语言调用概览.md)） | ✅ |
 | **第5章 MCP 协议与工具集成（新增·核心）** | | |
 | [1. MCP 协议架构](docs/C5/1.%20MCP%20协议架构.md) | 协议原理、架构、调用链 | ✅ |
 | [2. 用 Ollama 构建 MCP Server](docs/C5/2.%20用%20Ollama%20构建%20MCP%20Server.md) | 天气服务 Server（实测） | ✅ |

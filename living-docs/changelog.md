@@ -7,7 +7,7 @@
 
 ### 0.17.x（本书基线，实测 0.17.7）
 
-- `/api/create` 改用结构化字段（`from` / `system` / `parameters`），不再依赖 modelfile 文本（见[第3章](../docs/C3/5.%20Modelfile%20高级编写.md)）；
+- `/api/create` 改用结构化字段（`from` / `system` / `parameters`），不再依赖 modelfile 文本（见[第3章](../docs/C3/4.%20Modelfile%20高级编写.md)）；
 - OpenAI 兼容接口新增 `/v1/responses`（实测 200，Codex 集成依赖此端点，见[第9章](../docs/C9/3.%20Codex%20CLI.md)）；
 - `ollama launch` 官方集成机制成熟：支持 Claude Code / Codex / DeepSeek Harness / OpenCode / n8n 等（见[第9章](../docs/C9)与[第12章](../docs/C12/3.%20n8n%20工作流自动化.md)）；
 - 模型库新增 `gemma4`、`qwen3.5` 等新家族（见[第1章](../docs/C1)）。
