@@ -19,7 +19,7 @@
 | 文档 | 内容 |
 |---|---|
 | [1. 搭建本地的 AI Copilot 编程助手](B-应用案例/1.%20搭建本地的%20AI%20Copilot%20编程助手.md) | Continue 插件接入本地模型 |
-| [2. LangChain 本地 Agent 参考](B-应用案例/2.%20LangChain%20本地%20Agent%20参考.md) | 框架原生 Agent 用法（正文第 8 章为更通用的手写方案） |
+| [2. LangChain 本地 Agent 参考](B-应用案例/2.%20LangChain%20本地%20Agent%20参考.md) | 框架原生 Agent 用法（正文 7.2 节为更通用的手写方案） |
 | [3. LlamaIndex 本地 Agent 参考](B-应用案例/3.%20LlamaIndex%20本地%20Agent%20参考.md) | 同上 |
 
 ## 附录与正文的关系

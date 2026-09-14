@@ -19,15 +19,14 @@ handy-ollama/
 │   ├── C4/   第4章  Ollama API 深度指南
 │   ├── C5/   第5章  MCP 协议与工具集成（新增）
 │   ├── C6/   第6章  主流框架集成
-│   ├── C7/   第7章  Agent 架构原理（新增）
-│   ├── C8/   第8章  轻量级 Agent 实现（新增）
-│   ├── C9/   第9章  主流 Harness × Ollama 集成实战（新增）
-│   ├── C10/  第10章 本地 RAG 与知识库
-│   ├── C11/  第11章 本地多 Agent 协作（新增）
-│   ├── C12/  第12章 可视化界面与工作流
+│   ├── C7/   第7章  Agent 原理与轻量级实现（新增）
+│   ├── C8/   第8章  主流 Harness × Ollama 集成实战（新增）
+│   ├── C9/  第9章 本地 RAG 与知识库
+│   ├── C10/  第10章 本地多 Agent 协作（新增）
+│   ├── C11/  第11章 可视化界面与工作流
 │   └── _meta/              # 内部文档（本文件），不进入导航
 ├── notebook/
-│   ├── C3/ … C12/          # 与章节对应的可运行代码
+│   ├── C3/ … C11/          # 与章节对应的可运行代码
 ├── images/                 # 教程插图（每章 ≤5 张截图）
 └── living-docs/            # 在线补充文档（书中原理 ↔ 线上配置）
     ├── hardware.md         # 硬件选购指南（每季度更新）
@@ -41,12 +40,12 @@ handy-ollama/
 |---|---|---|
 | C1 Ollama 介绍 | → C1 Ollama 与本地 AI 生态 | 重写：刷新特性，新增 Agent 场景模型选型 |
 | C2.1-2.4 安装（macOS/Win/Linux/Docker） | → C2.1-2.4 | 保留刷新：版本号、命令、截图 |
-| （无） | → C2.5 GPU/CPU 混合推理配置 | 新增 |
-| C3.1 自定义导入模型 | → C3.1 | 保留刷新，补 GGUF 深度解析 |
-| C3.2 模型存储位置 | → C3.2 | 保留 |
-| C3.3 GPU 运行 | → C3.3 | 保留 |
+| （无） | → C3.5 GPU-CPU 混合推理配置 | 新增 |
+| C3.1 自定义导入模型 | → C3.2 | 保留刷新，补 GGUF 深度解析 |
+| C3.2 模型存储位置 | → C3.1 | 保留 |
+| C3.3 GPU 运行 | 并入 C3.5（过时的 OLLAMA_GPU_LAYER 方案废弃） | 合并去重 |
 | （无） | → C3.4 Modelfile 高级编写 | 新增（Agent 场景 system prompt/参数固化） |
-| （无） | → C3.5 量化选型（Q4_K_M/Q8_0 权衡） | 新增 |
+| （无） | → C3.3 GGUF 深度解析与量化选型 | 新增（Agent 场景量化权衡） |
 | C4.1 API 使用指南 | → C4.1 REST API 核心交互 | 重写：聚焦请求/响应结构 |
 | （无） | → C4.2 OpenAI 兼容接口 | 新增（Harness 对接的事实标准） |
 | （无） | → C4.3 Tool Calling API | 新增（请求/响应结构详解） |
@@ -55,15 +54,15 @@ handy-ollama/
 | C5.1-5.2 LangChain 集成 | → C6.1 LangChain 集成 | 重写刷新 |
 | （无） | → C6.2 LlamaIndex 集成 | 新增（含 Embedding 后端 RAG） |
 | （无） | → C6.3 OpenAI 兼容接口对接任意框架 | 新增 |
-| （无） | → C7 Agent 架构原理 | 全新（控制篇幅，原理层） |
-| （无） | → C8 轻量级 Agent 实现 | 全新（100 行 Python，承上启下） |
-| （无） | → C9 Claude Code / DeepSeek Harness / Codex CLI | 全新（核心章节，每个集成必须实测） |
-| C7.3 LangChain RAG / C7.4 LlamaIndex RAG / C7.7 DeepSeek R1 RAG | → C10.2 本地 RAG 实战 | 合并重写，去重 |
-| （无） | → C10.3 GraphRAG / Agentic RAG | 新增 |
-| （无） | → C11 CrewAI / LangGraph 多 Agent + 资源调度 | 全新 |
-| C6.1 FastAPI 界面 / C6.2 WebUI | → C12.1-12.4 Open WebUI / Dify / n8n / FastAPI | 重写：聚焦集成原理，UI 截图 ≤5 张 |
-| C7.2 Dify 接入 | → C12.2 | 保留刷新 |
-| C7.1 AI Copilot / C7.5 LangChain Agent / C7.6 LlamaIndex Agent | 部分并入 C7/C8 原理与实现，其余废弃 | 拆分吸收 |
+| （无） | → C7.1 Agent 架构原理 | 全新（控制篇幅，原理层） |
+| （无） | → C7.2 轻量级 Agent 实现 | 全新（100 行 Python，承上启下） |
+| （无） | → C8 Claude Code / DeepSeek Harness / Codex CLI | 全新（核心章节，每个集成必须实测） |
+| C7.3 LangChain RAG / C7.4 LlamaIndex RAG / C7.7 DeepSeek R1 RAG | → C9.2 本地 RAG 实战 | 合并重写，去重 |
+| （无） | → C9.3 GraphRAG / Agentic RAG | 新增 |
+| （无） | → C10 CrewAI / LangGraph 多 Agent + 资源调度 | 全新 |
+| C6.1 FastAPI 界面 / C6.2 WebUI | → C11.1-11.4 Open WebUI / Dify / n8n / FastAPI | 重写：聚焦集成原理，UI 截图 ≤5 张 |
+| C7.2 Dify 接入 | → C11.2 | 保留刷新 |
+| C7.1 AI Copilot / C7.5 LangChain Agent / C7.6 LlamaIndex Agent | 部分并入 C7.1/C7.2 原理与实现，其余废弃 | 拆分吸收 |
 
 ## 三、编辑规范（硬性约束）
 

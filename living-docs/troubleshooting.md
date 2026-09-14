@@ -40,19 +40,19 @@ ollama run qwen3:8b --verbose   # 看加载日志
 
 ### Q6: 换模型时等待很久（反复加载）
 **原因**：`OLLAMA_KEEP_ALIVE` 默认 5 分钟，模型被卸载。
-**处理**：`export OLLAMA_KEEP_ALIVE=24h`（或 `-1` 常驻），见[第11章](../docs/C11/3.%20本地模型资源调度.md)。
+**处理**：`export OLLAMA_KEEP_ALIVE=24h`（或 `-1` 常驻），见[第10章](../docs/C10/3.%20本地模型资源调度.md)。
 
 ### Q7: 显存 OOM / 崩溃
-**处理**：三板斧——`keep_alive: 0` 及时卸载、`num_ctx` 缩短、换小模型；开启 `OLLAMA_FLASH_ATTENTION=1` + `OLLAMA_KV_CACHE_TYPE=q8_0`（见[第11章](../docs/C11/3.%20本地模型资源调度.md)）。
+**处理**：三板斧——`keep_alive: 0` 及时卸载、`num_ctx` 缩短、换小模型；开启 `OLLAMA_FLASH_ATTENTION=1` + `OLLAMA_KV_CACHE_TYPE=q8_0`（见[第10章](../docs/C10/3.%20本地模型资源调度.md)）。
 
 ## 三、Agent / Harness 对接类
 
 ### Q8: Claude Code / Codex / dsh 连不上本地模型
 **排查清单**：
 1. `curl http://localhost:11434/api/tags` 通不通；
-2. 环境变量是否生效（Claude Code 需 `ANTHROPIC_BASE_URL`，Codex 需 `base_url` 指向 `/v1/`，见[第9章](../docs/C9)）；
+2. 环境变量是否生效（Claude Code 需 `ANTHROPIC_BASE_URL`，Codex 需 `base_url` 指向 `/v1/`，见[第8章](../docs/C8)）；
 3. 模型名是否本地存在（`ollama list`）；
-4. Harness 是否要求 64K+ 上下文（Codex 官方要求，见[第9章 3](../docs/C9/3.%20Codex%20CLI.md)）。
+4. Harness 是否要求 64K+ 上下文（Codex 官方要求，见[第8章 3](../docs/C8/3.%20Codex%20CLI.md)）。
 
 ### Q9: 本地模型不调用工具 / 参数乱填
 **原因**：模型工具调用能力不足 / 量化太低 / 工具描述不清。
@@ -60,7 +60,7 @@ ollama run qwen3:8b --verbose   # 看加载日志
 
 ### Q10: Agent 跑着跑着"忘了任务"
 **原因**：上下文超限被截断 / 目标不在可见范围。
-**处理**：长上下文模型 + 合理 `num_ctx`；把目标固定进系统提示词；工具输出截断（见[第7章](../docs/C7/1.%20Agent%20架构原理.md)）。
+**处理**：长上下文模型 + 合理 `num_ctx`；把目标固定进系统提示词；工具输出截断（见[7.1 Agent 架构原理](../docs/C7/1.%20Agent%20架构原理.md)）。
 
 ### Q11: MCP 连接报 "No module named 'mcp'"
 **原因**：Client 用系统 python 启动 Server，两边环境不一致。

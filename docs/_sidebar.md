@@ -28,30 +28,29 @@
         * [6.2 LangChain 集成 - JavaScript](C6/2.%20LangChain%20集成%20-%20JavaScript.md)
         * [6.3 LlamaIndex 集成](C6/3.%20LlamaIndex%20集成.md)
         * [6.4 OpenAI 兼容接口对接任意框架](C6/4.%20OpenAI%20兼容接口对接任意框架.md)
-    * 第 7 章 Agent 架构原理
+    * 第7章 Agent 原理与轻量级实现
         * [7.1 Agent 架构原理](C7/1.%20Agent%20架构原理.md)
-    * 第 8 章 轻量级 Agent 实现
-        * [8.1 轻量级 Agent 实现（100 行）](C8/1.%20轻量级%20Agent%20实现.md)
-        * [8.2 从手写 Agent 到 Harness](C8/2.%20从手写%20Agent%20到%20Harness.md)
-    * 第 9 章 主流 Harness × Ollama 集成
-        * [9.1 Claude Code](C9/1.%20Claude%20Code.md)
-        * [9.2 DeepSeek Harness](C9/2.%20DeepSeek%20Harness.md)
-        * [9.3 Codex CLI](C9/3.%20Codex%20CLI.md)
-    * 第 10 章 本地 RAG 与知识库
-        * [10.1 RAG 原理与本地组件](C10/1.%20RAG%20原理与本地组件.md)
-        * [10.2 使用 LangChain 搭建本地 RAG 应用](C10/2.%20使用%20LangChain%20搭建本地%20RAG%20应用.md)
-        * [10.3 使用 LlamaIndex 搭建本地 RAG 应用](C10/3.%20使用%20LlamaIndex%20搭建本地%20RAG%20应用.md)
-        * [10.4 使用 DeepSeek R1 和 Ollama 实现本地 RAG 应用](C10/4.%20使用%20DeepSeek%20R1%20和%20Ollama%20实现本地%20RAG%20应用.md)
-        * [10.5 GraphRAG 与 Agentic RAG](C10/5.%20GraphRAG%20与%20Agentic%20RAG.md)
-    * 第 11 章 本地多 Agent 协作
-        * [11.1 CrewAI 多 Agent 协作](C11/1.%20CrewAI%20多%20Agent%20协作.md)
-        * [11.2 LangGraph 多 Agent 协作](C11/2.%20LangGraph%20多%20Agent%20协作.md)
-        * [11.3 本地模型资源调度](C11/3.%20本地模型资源调度.md)
-    * 第 12 章 可视化界面与工作流
-        * [12.1 Open WebUI 部署](C12/1.%20Open%20WebUI%20部署.md)
-        * [12.2 Dify 接入 Ollama](C12/2.%20Dify%20接入%20Ollama.md)
-        * [12.3 n8n 工作流自动化](C12/3.%20n8n%20工作流自动化.md)
-        * [12.4 使用 FastAPI 部署自定义对话界面](C12/4.%20使用%20FastAPI%20部署自定义对话界面.md)
+        * [7.2 轻量级 Agent 实现（100 行）](C7/2.%20轻量级%20Agent%20实现.md)
+        * [7.3 从手写 Agent 到 Harness](C7/3.%20从手写%20Agent%20到%20Harness.md)
+    * 第8章 主流 Harness × Ollama 集成
+        * [8.1 Claude Code](C8/1.%20Claude%20Code.md)
+        * [8.2 DeepSeek Harness](C8/2.%20DeepSeek%20Harness.md)
+        * [8.3 Codex CLI](C8/3.%20Codex%20CLI.md)
+    * 第9章 本地 RAG 与知识库
+        * [9.1 RAG 原理与本地组件](C9/1.%20RAG%20原理与本地组件.md)
+        * [9.2 使用 LangChain 搭建本地 RAG 应用](C9/2.%20使用%20LangChain%20搭建本地%20RAG%20应用.md)
+        * [9.3 使用 LlamaIndex 搭建本地 RAG 应用](C9/3.%20使用%20LlamaIndex%20搭建本地%20RAG%20应用.md)
+        * [9.4 使用 DeepSeek R1 和 Ollama 实现本地 RAG 应用](C9/4.%20使用%20DeepSeek%20R1%20和%20Ollama%20实现本地%20RAG%20应用.md)
+        * [9.5 GraphRAG 与 Agentic RAG](C9/5.%20GraphRAG%20与%20Agentic%20RAG.md)
+    * 第10章 本地多 Agent 协作
+        * [10.1 CrewAI 多 Agent 协作](C10/1.%20CrewAI%20多%20Agent%20协作.md)
+        * [10.2 LangGraph 多 Agent 协作](C10/2.%20LangGraph%20多%20Agent%20协作.md)
+        * [10.3 本地模型资源调度](C10/3.%20本地模型资源调度.md)
+    * 第11章 可视化界面与工作流
+        * [11.1 Open WebUI 部署](C11/1.%20Open%20WebUI%20部署.md)
+        * [11.2 Dify 接入 Ollama](C11/2.%20Dify%20接入%20Ollama.md)
+        * [11.3 n8n 工作流自动化](C11/3.%20n8n%20工作流自动化.md)
+        * [11.4 使用 FastAPI 部署自定义对话界面](C11/4.%20使用%20FastAPI%20部署自定义对话界面.md)
     * 📎 附录
         * [附录说明](appendix/README.md)
         * [A-0 多语言调用概览](appendix/A-多语言调用/0.%20多语言调用概览.md)

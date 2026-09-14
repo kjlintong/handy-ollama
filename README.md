@@ -83,35 +83,34 @@ Agent 工具（Claude Code、Codex CLI、DeepSeek Harness 等）的爆发没有�
 
 | 章节 | 关键内容 | 状态 |
 |---|---|---|
-| **第7章 Agent 架构原理（新增）** | | |
+| **第7章 Agent 原理与轻量级实现（新增）** | | |
 | [1. Agent 架构原理](docs/C7/1.%20Agent%20架构原理.md) | ReAct / Planning / Tool Use、**本地模型三大短板** | ✅ |
-| **第8章 轻量级 Agent 实现（新增）** | | |
-| [1. 轻量级 Agent 实现](docs/C8/1.%20轻量级%20Agent%20实现.md) | **100 行 Python Agent（实测）** | ✅ |
-| [2. 从手写 Agent 到 Harness](docs/C8/2.%20从手写%20Agent%20到%20Harness.md) | 原理 → 成熟工具的迁移路径 | ✅ |
-| **第9章 主流 Harness × Ollama（新增·核心）** | | |
-| [1. Claude Code](docs/C9/1.%20Claude%20Code.md) | 后端配置、模型选型、混合策略 | ✅ |
-| [2. DeepSeek Harness](docs/C9/2.%20DeepSeek%20Harness.md) | `ollama launch dsh` 集成 | ✅ |
-| [3. Codex CLI](docs/C9/3.%20Codex%20CLI.md) | `--oss` 模式、profile 配置（**实测跑通**） | ✅ |
+| [2. 轻量级 Agent 实现](docs/C7/2.%20轻量级%20Agent%20实现.md) | **100 行 Python Agent（实测）** | ✅ |
+| [3. 从手写 Agent 到 Harness](docs/C7/3.%20从手写%20Agent%20到%20Harness.md) | 原理 → 成熟工具的迁移路径 | ✅ |
+| **第8章 主流 Harness × Ollama（新增·核心）** | | |
+| [1. Claude Code](docs/C8/1.%20Claude%20Code.md) | 后端配置、模型选型、混合策略 | ✅ |
+| [2. DeepSeek Harness](docs/C8/2.%20DeepSeek%20Harness.md) | `ollama launch dsh` 集成 | ✅ |
+| [3. Codex CLI](docs/C8/3.%20Codex%20CLI.md) | `--oss` 模式、profile 配置（**实测跑通**） | ✅ |
 
 ### 第四部分：场景实战层
 
 | 章节 | 关键内容 | 状态 |
 |---|---|---|
-| **第10章 本地 RAG 与知识库** | | |
-| [1. RAG 原理与本地组件](docs/C10/1.%20RAG%20原理与本地组件.md) | 流程、组件选型、调优 | ✅ |
-| [2. LangChain 本地 RAG](docs/C10/2.%20使用%20LangChain%20搭建本地%20RAG%20应用.md) | LangChain + Chroma | ✅ |
-| [3. LlamaIndex 本地 RAG](docs/C10/3.%20使用%20LlamaIndex%20搭建本地%20RAG%20应用.md) | LlamaIndex RAG | ✅ |
-| [4. DeepSeek R1 本地 RAG](docs/C10/4.%20使用%20DeepSeek%20R1%20和%20Ollama%20实现本地%20RAG%20应用.md) | 推理模型 + RAG | ✅ |
-| [5. GraphRAG 与 Agentic RAG](docs/C10/5.%20GraphRAG%20与%20Agentic%20RAG.md) | 进阶方向（LightRAG / 检索工具化） | ✅ |
-| **第11章 本地多 Agent 协作（新增）** | | |
-| [1. CrewAI 多 Agent 协作](docs/C11/1.%20CrewAI%20多%20Agent%20协作.md) | CrewAI + Ollama | ✅ |
-| [2. LangGraph 多 Agent 协作](docs/C11/2.%20LangGraph%20多%20Agent%20协作.md) | 图编排（**实测**） | ✅ |
-| [3. 本地模型资源调度](docs/C11/3.%20本地模型资源调度.md) | 显存规划、并发策略 | ✅ |
-| **第12章 可视化界面与工作流** | | |
-| [1. Open WebUI 部署](docs/C12/1.%20Open%20WebUI%20部署.md) | WebUI 部署 | ✅ |
-| [2. Dify 接入 Ollama](docs/C12/2.%20Dify%20接入%20Ollama.md) | Dify 集成本地模型 | ✅ |
-| [3. n8n 工作流自动化](docs/C12/3.%20n8n%20工作流自动化.md) | 自动化流程接入 | ✅ |
-| [4. FastAPI 自定义对话界面](docs/C12/4.%20使用%20FastAPI%20部署自定义对话界面.md) | 自定义界面 | ✅ |
+| **第9章 本地 RAG 与知识库** | | |
+| [1. RAG 原理与本地组件](docs/C9/1.%20RAG%20原理与本地组件.md) | 流程、组件选型、调优 | ✅ |
+| [2. LangChain 本地 RAG](docs/C9/2.%20使用%20LangChain%20搭建本地%20RAG%20应用.md) | LangChain + Chroma | ✅ |
+| [3. LlamaIndex 本地 RAG](docs/C9/3.%20使用%20LlamaIndex%20搭建本地%20RAG%20应用.md) | LlamaIndex RAG | ✅ |
+| [4. DeepSeek R1 本地 RAG](docs/C9/4.%20使用%20DeepSeek%20R1%20和%20Ollama%20实现本地%20RAG%20应用.md) | 推理模型 + RAG | ✅ |
+| [5. GraphRAG 与 Agentic RAG](docs/C9/5.%20GraphRAG%20与%20Agentic%20RAG.md) | 进阶方向（LightRAG / 检索工具化） | ✅ |
+| **第10章 本地多 Agent 协作（新增）** | | |
+| [1. CrewAI 多 Agent 协作](docs/C10/1.%20CrewAI%20多%20Agent%20协作.md) | CrewAI + Ollama | ✅ |
+| [2. LangGraph 多 Agent 协作](docs/C10/2.%20LangGraph%20多%20Agent%20协作.md) | 图编排（**实测**） | ✅ |
+| [3. 本地模型资源调度](docs/C10/3.%20本地模型资源调度.md) | 显存规划、并发策略 | ✅ |
+| **第11章 可视化界面与工作流** | | |
+| [1. Open WebUI 部署](docs/C11/1.%20Open%20WebUI%20部署.md) | WebUI 部署 | ✅ |
+| [2. Dify 接入 Ollama](docs/C11/2.%20Dify%20接入%20Ollama.md) | Dify 集成本地模型 | ✅ |
+| [3. n8n 工作流自动化](docs/C11/3.%20n8n%20工作流自动化.md) | 自动化流程接入 | ✅ |
+| [4. FastAPI 自定义对话界面](docs/C11/4.%20使用%20FastAPI%20部署自定义对话界面.md) | 自定义界面 | ✅ |
 
 ### 📎 附录（基础操作细节与经典案例）
 
